@@ -16,8 +16,8 @@ public class ProductService {
 		this.productRepository = productRepository;
 	}
 
-	@CacheEvict("product")
-	public ProductEntity save(String name) {
+	@CacheEvict(value = "products", key = "#userId")
+	public ProductEntity save(String name, String userId) {
 		System.out.println("Cache Limpo");
 		ProductEntity productEntity = new ProductEntity(name);
 
@@ -26,8 +26,8 @@ public class ProductService {
 		return saveProductEntity;
 	}
 
-	@Cacheable("product")
-	public List<ProductEntity> get() {
+	@Cacheable(value = "products", key = "#userId")
+	public List<ProductEntity> get(String userId) {
 		System.out.println("Sem cache");
 		return this.productRepository.findAll();
 	}
