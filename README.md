@@ -5,7 +5,7 @@
 ![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white)
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 
-Este projeto muito simples para demonstrar com implementar Cache Utilizando **Redis**.
+Este simples projeto serve para demonstrar com implementar **cache** utilizando **Redis**.
 
 A API foi desenvolvida para por em meu portifólio e mostrar os meus conhecimentos.
 
@@ -35,7 +35,9 @@ git clone https://github.com/lucasrluz/redis-app-spring-boot.git
 
 
 ## API Endpoints
-Para visualizar a documentação da API, acesse: `/swagger-ui/index.html`
+Existe duas rotas: 
+* POST `/product/{userid}` O nome do produto pode ser enviado em texto simples.
+* GET `/product/{userid}`
 
 ## Banco de Dados
-Para conexão do Banco de Dados substitua aos valores do [application.yml](https://github.com/lucasrluz/note/blob/main/src/main/resources/application.yml) pelos dados de conexão do seu DB.
+Para conexão do Banco de Dados substitua aos valores do [application.yml](https://github.com/lucasrluz/redis-app-spring-boot/blob/main/src/main/resources/application.yml) pelos dados de conexão do seu DB.
